@@ -2,7 +2,6 @@ package software.baller.jsonsnapshotmigration;
 
 import lombok.*;
 
-import java.util.List;
 import java.util.UUID;
 
 @EqualsAndHashCode(callSuper = true)
@@ -10,9 +9,9 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AdultV1 extends Adult {
+public class ChildV2 extends Child{
     public UUID id;
     public String name;
+    public String favoriteColor;
     public Integer age;
-    public List<Child> children;
 }
