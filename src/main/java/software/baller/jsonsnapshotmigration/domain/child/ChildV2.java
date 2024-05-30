@@ -1,4 +1,4 @@
-package software.baller.jsonsnapshotmigration;
+package software.baller.jsonsnapshotmigration.domain.child;
 
 import lombok.*;
 

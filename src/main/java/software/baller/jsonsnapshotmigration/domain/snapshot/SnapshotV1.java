@@ -1,6 +1,7 @@
-package software.baller.jsonsnapshotmigration;
+package software.baller.jsonsnapshotmigration.domain.snapshot;
 
 import lombok.*;
+import software.baller.jsonsnapshotmigration.domain.adult.Adult;
 
 import java.util.Date;
 import java.util.UUID;
@@ -14,5 +15,5 @@ public class SnapshotV1 extends Snapshot {
     public UUID id;
     public Integer version;
     public Date timestamp;
-    public Adult snapshot;
+    public Adult adult;
 }

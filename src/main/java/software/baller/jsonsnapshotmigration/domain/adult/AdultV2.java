@@ -1,6 +1,7 @@
-package software.baller.jsonsnapshotmigration;
+package software.baller.jsonsnapshotmigration.domain.adult;
 
 import lombok.*;
+import software.baller.jsonsnapshotmigration.domain.child.Child;
 
 import java.util.List;
 import java.util.UUID;
