@@ -349,19 +349,19 @@ Which makes our snapshot JSON look like this:
 
 ```json
 {
-  "@jsonType": "v1",
+  "jsonType": "v1",
   "id": "a9018729-a154-4c51-aada-5811efee6d54",
   "version": 1,
   "timestamp": "1999-01-08 04:05:06",
   "snapshot": {
-    "@jsonType": "v2",
+    "jsonType": "v2",
     "id": "f41451b0-00e5-4bb5-a1ca-d01f493e6885",
     "name": "Bob",
     "age": 26,
     "ageInMonths": 312,
     "children": [
       {
-        "@jsonType": "v2",
+        "jsonType": "v2",
         "id": "ae8efef6-0832-4d77-97fa-d73c406b51dc",
         "name": "Billy",
         "favoriteColor": "blue",
