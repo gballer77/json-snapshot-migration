@@ -148,7 +148,7 @@ The first change is going to be adding `age` to the children. For this we will n
 
 ```java
 // Child.java
-@JsonTypeInfo(use=JsonTypeInfo.Id.NAME, property="jsonType", defaultImpl = ChildV1.class)
+@JsonTypeInfo(use=JsonTypeInfo.Id.NAME, property="jsonType", defaultImpl = ChildV2.class)
 @JsonSubTypes({
         @JsonSubTypes.Type(name = "v1", value = ChildV1.class),
         @JsonSubTypes.Type(name = "v2", value = ChildV2.class)
@@ -242,7 +242,7 @@ Our new JSON looks like this:
 
 ##### Accessing members 
 
-Now that we've seen how the objects are stored, marshalled, and unmarshalled, lets talk a little bit about how they can be used in the code.  In order to work around the unknown concrete type or neverending casting problem, we introduced the `get` and `v<x>` methods to our base classes.  This enables us to use java `Optional` type syntax to access our concrete class.  The following shows how we would access the latest version of the snapshot payload for child and get the id.
+Now that we've seen how the objects are stored, marshalled, and unmarshalled, lets talk a little bit about how they can be used in the code.  In order to work around the unknown concrete type or never ending casting problem, we introduced the `get` and `v<x>` methods to our base classes.  This enables us to use java `Optional` type syntax to access our concrete class.  The following shows how we would access the latest version of the snapshot payload for child and get the id.
 
 ```java
 void accessChildId() {
@@ -284,11 +284,11 @@ public class AdultV2 extends Adult {
 }
 ```
 
-Our new base Java class looks like this, with `AdultV1` still being the default class:
+Our new base Java class looks like this, with `AdultV2` becoming the default class:
 
 ```java
 // Adult.java
-@JsonTypeInfo(use=JsonTypeInfo.Id.NAME, property="jsonType", defaultImpl = AdultV1.class)
+@JsonTypeInfo(use=JsonTypeInfo.Id.NAME, property="jsonType", defaultImpl = AdultV2.class)
 @JsonSubTypes({
         @JsonSubTypes.Type(name = "v1", value = AdultV1.class),
         @JsonSubTypes.Type(name = "v2", value = AdultV2.class)
